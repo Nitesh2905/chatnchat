@@ -113,19 +113,121 @@
                         border: none;
                         padding: 5px 8px;
                         border-radius: 5px;
+                        color: white;
                     }
                 }
-               
 
               
             }
           
 
+            .search{
+                border-bottom: 1px solid gray;
+
+                .searchForm{
+                    padding: 10px;
+                    input{
+                        background-color: transparent;
+                        border: none;
+                        color: white;
+                        outline: none;
+                        border-bottom: 1px solid ;
+                        width: 100%;
+                        &::placeholder{
+                            color: rgb(255, 255, 255);
+                        }
+                    }
+                }
+            }
+           
+            .userChat{
+                display: flex;
+                align-items: center;
+                color: white;
+                cursor: pointer;
+              
+                gap: 10px;
+
+                &:hover{
+                    background-color: #001265;
+                }
+                img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .userChatInfo{
+                    span{
+                        font-weight: 500;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
             
         }
 
         .chat{
-            flex:2
+            flex:2;
+
+            .chatInfo{
+                height:50px;
+                background-color: #4866ec;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+            }
+
+            .message{
+                
+                padding: 10px;
+               
+            }
+
+            .input{
+                height: 50px;
+                background-color: rgb(255, 254, 254);
+                padding: 10px;
+                position: relative;
+                top: calc(49%);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            input{
+                width: 100%;
+                padding: 12px;
+                border: none;
+                outline: none;
+                color: gray;
+                font-size: 18px;
+
+                &::placeholder{
+                    color: lightgray;
+                }
+
+            }
+
+            .send{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+
+                button{
+                    background-color: #4866ec;
+                    cursor: pointer;
+                    border: none;
+                    padding: 5px 8px;
+                    border-radius: 5px;
+                    color: white;
+                }
+            }
+            
         }
     }
 }
