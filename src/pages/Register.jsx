@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword,updateProfile } from "firebase/auth";
 import {auth,storage,db} from '../firebase'
 import {ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import Add from "./images/upload.png";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,Link} from 'react-router-dom'
 import { setDoc,doc } from "firebase/firestore";
 
 
@@ -50,7 +50,7 @@ uploadTask.on(
       })
 
       await setDoc(doc(db,"userChats",res.user.uid),{})
-      navigate('/')
+      navigate("/")
     });
   }
 );
@@ -85,7 +85,7 @@ uploadTask.on(
           <button>Sign up</button>
         </form>
 
-        <p>Already have an account? Login</p>
+        <p>Already have an account? <Link to='/login'>Login</Link></p>
        {err && <span style={{color:"red",fontWeight:"bold"}}>Something went wrong</span> }
       </div>
     </div>
